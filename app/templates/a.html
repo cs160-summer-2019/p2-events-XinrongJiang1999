@@ -64,6 +64,37 @@
 
 <script type="text/javascript">
 	// your solution here
+$( document ).ready(function() {
+  
+//Clicking on a purple bubble pops (i.e. hides) all purple bubbles
+$('.p2-circle.bg-purple').click(function(){
+  $('.p2-circle.bg-purple').hide();
+});
+  
+//Clicking on a green bubble pops all bubbles that are green and bubbles that are blue
+$( ".p2-circle.bg-green" ).click(function() {
+  $( ".p2-circle.bg-green" ).hide();
+  $( ".p2-circle.bg-blue" ).hide();
+});
+  
+//Clicking on an orange bordered bubble pops all other orange bordered bubbles
+$( ".p2-circle.bg-orange.p2-border" ).click(function() {
+  $( ".p2-circle.bg-orange.p2-border" ).hide();
+  $( this ).show();
+});
+  
+//Hovering over the gradient bubble hides the gradient bubble
+$( "#gradient-circle" ).hover(function() {
+  $("#gradient-circle" ).hide();
+});
+  
+//When clicked, the reset button should show all of the buttons that have been hidden by the popping interactions. 
+$( ".btn.btn-light.float-right" ).click(function() {
+   $(".p2-circle").show();
+  });
+  
+});
+  
 
 </script>
 </body>

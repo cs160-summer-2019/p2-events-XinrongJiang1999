@@ -41,7 +41,23 @@
 <script type="text/javascript">
 
 	// your solution here
+$( document ).ready(function() {
 
+var stop = self.setInterval(add,1000);
+function add(){
+  $(".shape-container").append("<div class='p2-circle bg-blue'></div>");
+};
+  
+  
+  
+$(".btn.btn-light.float-right").click(function(){
+  clearInterval(stop);
+})
+
+})
+  
+  
+  
 </script>
 </body>
 </html>
